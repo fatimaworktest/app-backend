@@ -1,0 +1,15 @@
+name: Pipeline Template (calls shared Aqua scan)
+on:
+  workflow_call:
+    secrets:
+      AQUA_KEY:
+        required: true
+      AQUA_SECRET:
+        required: true
+
+jobs:
+  include-aqua:
+    uses: fatimaworktest/ci-aqua-component/.github/workflows/aqua-scan.yml@main
+    secrets:
+      AQUA_KEY: ${{ secrets.AQUA_KEY }}
+      AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
