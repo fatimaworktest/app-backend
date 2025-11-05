@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-shared:
-    uses: your-org/ci-aqua-scan/.github/workflows/aqua-scan.yml@main
+    uses: fatimaworktest/ci-aqua-scan/.github/workflows/aqua-scan.yml@main
     secrets:
       AQUA_KEY: ${{ secrets.AQUA_KEY }}
       AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
